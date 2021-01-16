@@ -1,0 +1,25 @@
+@use "sass:map";
+@use "sass:list";
+
+@mixin socialMediaIcons($main-palette) {
+  @each $key, $value in $main-palette {
+    .#{$key} {
+      @if list.length($value) == 2 {
+        color: list.nth($value, 1);
+        background-color: list.nth($value, 2);
+      }
+      border-radius: 100%;
+      @if $key != "icoFacebook" {
+        padding: 0.6rem;
+      }
+    }
+  }
+}
+
+@mixin socialMediaBackground($main-palette) {
+  .social_media {
+    @if list.length($main-palette) == 2 {
+      background: linear-gradient(to right, list.nth($main-palette, 1), list.nth($main-palette, 2));
+    }
+  }
+} ;
