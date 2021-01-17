@@ -1,0 +1,26 @@
+@use "sass:map";
+@use "sass:list";
+
+@mixin rosepurpleBackground($main-palette) {
+    .rosepurple {
+        @if list.length($main-palette) == 3 {
+            position: relative;
+            color: list.nth($main-palette, 1);
+            text-align: left;
+            background: linear-gradient(to right, list.nth($main-palette, 2), list.nth($main-palette, 3));
+        }
+    }
+}
+
+@mixin addPattern {
+    .rosepurple:after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: url(/dist/img/bg-pattern.png) repeat;
+    }
+}

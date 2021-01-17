@@ -88,6 +88,24 @@ nav div span {
     content: "Menu";
   }
 }
+.rosepurple:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url(/dist/img/bg-pattern.png) repeat;
+}
+
+.rosepurple {
+  position: relative;
+  color: white;
+  text-align: left;
+  background: linear-gradient(to right, #da2431, #7a4397);
+}
+
 .social_media {
   background: linear-gradient(to right, #ffc340, #fdc53a);
 }
